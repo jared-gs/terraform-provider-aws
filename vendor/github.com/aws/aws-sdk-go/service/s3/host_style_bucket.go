@@ -44,7 +44,7 @@ func updateEndpointForS3Config(r *request.Request, bucketName string) {
 			}
 		}
 		updateEndpointForAccelerate(r, bucketName)
-	} else if !forceHostStyle && r.Operation.Name != opGetBucketLocation {
+	} else if !forceHostStyle {
 		updateEndpointForHostStyle(r, bucketName)
 	}
 }
